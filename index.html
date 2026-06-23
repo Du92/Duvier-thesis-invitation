@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Invitation to the PhD Thesis Defence of Duvier Suárez Fontanella." />
+    <meta name="theme-color" content="#060916" />
+    <title>PhD Thesis Defence — Duvier Suárez Fontanella</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="dark-sector-canvas" aria-hidden="true"></canvas>
+
+    <div id="confirmation-overlay" class="confirmation-overlay" hidden aria-hidden="true">
+      <canvas id="confirmation-canvas" aria-hidden="true"></canvas>
+      <section class="confirmation-panel" role="dialog" aria-modal="true" aria-labelledby="confirmation-title" aria-describedby="confirmation-description">
+        <p id="confirmation-kicker" class="overlay-kicker">RSVP SIGNAL ACQUIRING</p>
+        <div class="overlay-status-line" aria-hidden="true"><span></span><span></span><span></span></div>
+        <h2 id="confirmation-title">Transmitiendo confirmación…</h2>
+        <p id="confirmation-description">Estableciendo un enlace con el evento.</p>
+        <div class="overlay-meter" aria-hidden="true"><span></span></div>
+        <div id="confirmation-actions" class="confirmation-actions" hidden>
+          <button id="confirmation-close" class="overlay-close" type="button">Cerrar</button>
+        </div>
+      </section>
+    </div>
+
+    <main>
+      <section class="hero" id="top" aria-labelledby="event-title">
+        <div class="hero-noise" aria-hidden="true"></div>
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="scanlines" aria-hidden="true"></div>
+        <div class="field-wave wave-one" aria-hidden="true"></div>
+        <div class="field-wave wave-two" aria-hidden="true"></div>
+        <div class="edge-telemetry telemetry-left" aria-hidden="true">mₐ &lt; 10⁻⁸ eV<br />gₐγ ≠ 0<br />B ≳ 10¹² G</div>
+        <div class="edge-telemetry telemetry-right" aria-hidden="true">SNR: ACQUIRING<br />FIELD: a(x,t)<br />RUN_03JUL26</div>
+
+        <div class="topbar">
+          <a class="brand" href="#top" aria-label="Duvier Suárez Fontanella — Thesis Defence">
+            <span class="brand-mark" aria-hidden="true">Δ</span>
+            <span>
+              <strong>DSF</strong>
+              <small data-i18n="brandSubtitle">OBSERVATORIO DEL SECTOR OSCURO</small>
+            </span>
+          </a>
+          <div class="lang-switch" role="group" aria-label="Language selector">
+            <button class="language-button active" type="button" data-language="es" aria-pressed="true">ES</button>
+            <span aria-hidden="true">/</span>
+            <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span><span data-i18n="eyebrow">DARK-SECTOR TRANSMISSION // 03 JUL 2026</span></p>
+            <p class="event-type" data-i18n="eventType">DEFENSA DE TESIS DOCTORAL</p>
+            <h1 id="event-title">Duvier Suárez<br /><em>Fontanella</em></h1>
+            <p class="hero-subtitle" data-i18n="heroSubtitle">PhD Thesis Defence</p>
+            <p class="thesis-title" data-i18n="thesisTitle">Axion Electrodynamics and Axion-Photon Mixing in Neutron Star Environments: from Formalism to Astrophysical Signatures</p>
+            <p class="research-line" data-i18n="researchLine">Dark Matter · Axions · Compact Objects · Numerical Relativity</p>
+
+            <div class="mission-clock-wrap" aria-labelledby="countdown-title">
+              <div class="mission-clock-header">
+                <span id="countdown-title" data-i18n="clockHeader">MISSION CLOCK · THESIS DEFENCE INITIALIZATION</span>
+                <span class="clock-tag" data-i18n="clockTag">T−Δt // EVENT HORIZON APPROACHING</span>
+              </div>
+              <div id="countdown" class="mission-clock" aria-live="polite">
+                <span class="countdown-prefix" aria-hidden="true">T−</span>
+                <div class="clock-unit"><strong id="days">00</strong><small data-i18n="days">DÍAS</small></div>
+                <span class="clock-colon" aria-hidden="true">:</span>
+                <div class="clock-unit"><strong id="hours">00</strong><small data-i18n="hours">HORAS</small></div>
+                <span class="clock-colon" aria-hidden="true">:</span>
+                <div class="clock-unit"><strong id="minutes">00</strong><small data-i18n="minutes">MINUTOS</small></div>
+                <span class="clock-colon" aria-hidden="true">:</span>
+                <div class="clock-unit"><strong id="seconds">00</strong><small data-i18n="seconds">SEGUNDOS</small></div>
+              </div>
+            </div>
+
+            <div class="hero-actions" aria-label="Event navigation">
+              <a class="launch-button" href="#rsvp">
+                <span class="launch-indicator" aria-hidden="true"></span>
+                <span class="launch-copy"><small data-i18n="heroRsvpProtocol">INITIATE RSVP PROTOCOL</small><strong data-i18n="heroRsvp">Confirmar asistencia</strong></span>
+                <span class="launch-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="details-button" href="#event-details"><span data-i18n="heroDetails">Ver detalles del evento</span><span aria-hidden="true"> ↓</span></a>
+            </div>
+
+            <div class="event-details" aria-label="Event details">
+              <div>
+                <span class="detail-label" data-i18n="dateLabel">FECHA</span>
+                <strong id="event-date">Viernes, 3 de julio de 2026</strong>
+              </div>
+              <div>
+                <span class="detail-label" data-i18n="timeLabel">HORA</span>
+                <strong id="event-time">10:30 h · CEST (UTC+2)</strong>
+              </div>
+              <div>
+                <span class="detail-label" data-i18n="venueLabel">LUGAR</span>
+                <strong id="event-venue">Aula de Grado · Edificio de Ciencias · Facultad de Ciencias</strong>
+              </div>
+            </div>
+          </div>
+
+          <aside class="signal-console" aria-label="Dark-sector event status">
+            <div class="console-header">
+              <span class="console-dot" aria-hidden="true"></span>
+              <span data-i18n="consoleTitle">ESTADO DEL EVENTO</span>
+              <span class="console-code">RUN_03JUL26</span>
+            </div>
+            <div class="signal-orbit" aria-hidden="true">
+              <span class="orbit orbit-a"></span>
+              <span class="orbit orbit-b"></span>
+              <span class="orbit-core"></span>
+              <span class="orbit-pulse"></span>
+            </div>
+            <dl class="console-readout">
+              <div><dt data-i18n="signalLabel">SEÑAL</dt><dd><span class="signal-good"></span><span data-i18n="signalValue">ESTABLE</span></dd></div>
+              <div><dt data-i18n="systemLabel">SISTEMA</dt><dd data-i18n="systemValue">LISTO</dd></div>
+              <div><dt data-i18n="fieldLabel">CAMPO</dt><dd>a(x,t)</dd></div>
+            </dl>
+            <p class="console-footer" data-i18n="consoleFooter">Una sala de espera en el borde del sector oscuro.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="information" id="event-details" aria-labelledby="invitation-heading">
+        <div class="copy">
+          <p class="section-kicker"><span data-i18n="invitationKicker">INVITACIÓN</span><span class="kicker-code">EVENT_NODE_01</span></p>
+          <h2 id="invitation-heading" data-i18n="invitationHeading">Me haría mucha ilusión contar contigo</h2>
+          <p data-i18n="invitationText">Tras estos años de trabajo e investigación, será un placer compartir este momento contigo. Por favor, confirma tu asistencia a continuación.</p>
+
+          <div id="venue-card" class="venue-card">
+            <div class="venue-index" aria-hidden="true">01</div>
+            <div>
+              <p class="venue-name" id="venue-name">[Aula · edificio · Facultad]</p>
+              <p id="venue-address">[Dirección completa]</p>
+              <a id="maps-link" class="text-link" href="#" target="_blank" rel="noreferrer"><span data-i18n="openMaps">Abrir en Google Maps</span><span aria-hidden="true"> ↗</span></a>
+            </div>
+          </div>
+
+          <div id="stream-card" class="stream-card" hidden>
+            <div class="venue-index" aria-hidden="true">02</div>
+            <div>
+              <p class="stream-label" data-i18n="streamLabel">RETRANSMISIÓN EN LÍNEA</p>
+              <a id="stream-link" class="text-link" href="#" target="_blank" rel="noreferrer"><span data-i18n="joinStream">Unirse a la retransmisión</span><span aria-hidden="true"> ↗</span></a>
+            </div>
+          </div>
+
+          <div class="calendar-actions" id="calendar-actions">
+            <a id="google-calendar-link" class="outline-button" target="_blank" rel="noreferrer" href="#"><span class="calendar-icon" aria-hidden="true">↗</span><span data-i18n="googleCalendar">Añadir a Google Calendar</span></a>
+            <a class="outline-button" href="thesis-defence.ics" download><span class="calendar-icon" aria-hidden="true">↓</span><span data-i18n="otherCalendar">Añadir a otro calendario</span></a>
+          </div>
+        </div>
+
+        <aside class="rsvp-card" id="rsvp" aria-labelledby="rsvp-heading">
+          <div class="rsvp-glow" aria-hidden="true"></div>
+          <p class="section-kicker"><span data-i18n="rsvpKicker">CONFIRMACIÓN</span><span class="kicker-code">RSVP_PROTOCOL</span></p>
+          <h2 id="rsvp-heading" data-i18n="rsvpHeading">¿Nos acompañarás?</h2>
+          <p class="rsvp-intro" data-i18n="rsvpIntro">Solo necesito tu nombre. El correo es opcional, por si hubiera un cambio de última hora.</p>
+
+          <form id="rsvp-form" novalidate>
+            <label for="name" data-i18n="nameLabel">Nombre y apellidos <span aria-hidden="true">*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" required maxlength="120" data-i18n-placeholder="namePlaceholder" placeholder="Escribe tu nombre" />
+            <label for="email" data-i18n="emailLabel">Correo electrónico <span class="optional">(opcional)</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" maxlength="180" data-i18n-placeholder="emailPlaceholder" placeholder="nombre@ejemplo.com" />
+            <label for="guests" data-i18n="guestsLabel">Número de asistentes</label>
+            <select id="guests" name="guests">
+              <option value="1" data-i18n="oneGuest">Solo yo</option>
+              <option value="2" data-i18n="twoGuests">2 personas</option>
+              <option value="3" data-i18n="threeGuests">3 personas</option>
+              <option value="4+" data-i18n="fourPlusGuests">4 o más personas</option>
+            </select>
+            <div class="honeypot" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off" /></div>
+            <button class="primary-button" id="submit-button" type="submit"><span class="button-pulse" aria-hidden="true"></span><span id="submit-label" data-i18n="confirmAttendance">Sí, confirmar asistencia</span><span aria-hidden="true"> →</span></button>
+            <button class="decline-button" id="decline-button" type="button" data-i18n="declineAttendance">No podré asistir</button>
+          </form>
+          <p class="privacy-note" data-i18n="privacyNote">Tus datos se utilizarán únicamente para organizar esta defensa de tesis.</p>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <span class="footer-orbit" aria-hidden="true"></span>
+      <p>© 2026 Duvier Suárez Fontanella <span aria-hidden="true">·</span> <span data-i18n="footerText">De los campos teóricos a un momento compartido.</span></p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

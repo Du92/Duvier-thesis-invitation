@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+PRODID:-//Duvier Suarez Fontanella//PhD Thesis Defence//EN
+BEGIN:VEVENT
+UID:duvier-phd-defence-20260703@invitation
+DTSTAMP:20260622T000000Z
+DTSTART:20260703T083000Z
+DTEND:20260703T103000Z
+SUMMARY:PhD Thesis Defence — Duvier Suárez Fontanella
+DESCRIPTION:PhD Thesis Defence / Defensa de tesis doctoral\n\nFriday 3 July 2026\, 10:30 CEST (UTC+2)\nUniversity of Salamanca\n\n[Add venue and streaming details in this file if desired.]
+LOCATION:[Aula · edificio · Facultad]\, University of Salamanca
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
