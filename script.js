@@ -15,7 +15,7 @@
   const overlayActions = document.querySelector('#confirmation-actions');
   const overlayClose = document.querySelector('#confirmation-close');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let language = 'es';
+  let language = 'en';
   let overlayState = 'idle';
   let previousFocus = null;
   let confirmationAnimation = null;
@@ -376,7 +376,7 @@
   }
 
   setupEventDetails();
-  setLanguage('es');
+  setLanguage('en');
   updateCountdown();
   window.setInterval(updateCountdown, 1000);
   startDarkSectorBackground();
