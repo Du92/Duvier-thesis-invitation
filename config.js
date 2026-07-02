@@ -9,7 +9,7 @@ window.THESIS_CONFIG = {
   venue: "Aula de Grado · Edificio de Ciencias · Facultad de Ciencias",
   address: "Pl. Caídos, s/n, 37008 Salamanca, España",
   mapsUrl: "https://maps.app.goo.gl/exNCWhMXEADYTJbT8",
-  streamUrl: "No streaming link available yet.",
+  streamUrl: "https://meet.google.com/fgz-vbqw-ozd",
   event: {
     // Friday 3 July 2026, 10:30 in Salamanca / CEST (UTC+2).
     startIso: "2026-07-03T10:30:00+02:00",
